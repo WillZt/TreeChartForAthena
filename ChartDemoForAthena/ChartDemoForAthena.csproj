@@ -148,8 +148,6 @@
     <Compile Include="Container\JsonReturnResult.cs" />
     <Compile Include="Container\ReturnResult.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Entities\ArchieveInfoEntity.cs" />
-    <Compile Include="Entities\HistoryRecordEntity.cs" />
     <Compile Include="Entities\NodeEntity.cs" />
     <Compile Include="Entities\TipsEntity.cs" />
     <Compile Include="Global.asax.cs">

@@ -11,7 +11,7 @@ namespace ChartDemoForAthena.Tools
         {
             System.DateTime time = System.DateTime.MinValue;
             System.DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
-            time = startTime.AddMilliseconds(d);
+            time = startTime.AddMilliseconds(d * 1000);
             return time.ToString("yyyy-MM-dd hh:mm:ss");
         }
     }
