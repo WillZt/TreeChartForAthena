@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div>
+    <div id="container">
+        <div id="infovis"></div>
+        <div id="log"></div>
+    </div>
+</div>
+
+@section scripts{
+<script language="javascript" type="text/javascript" src="../Scripts/jit.js"></script>
+<script language="javascript" type="text/javascript" src="../Scripts/example1.js"></script>
+<script type="text/javascript">
+    window.onload = init();
+</script>
+}
