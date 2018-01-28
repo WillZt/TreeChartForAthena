@@ -1,5 +1,0 @@
-storage
-log
-package
-.vs
-.git
