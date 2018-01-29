@@ -10,5 +10,7 @@ namespace ChartDemoForAthena.Entities
         public string time { get; set; }
 
         public string value { get; set; }
+
+        public bool isUrlShow { get; set; }
     }
 }

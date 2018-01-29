@@ -1,6 +1,6 @@
 #container {
-    width: 1000px;
-    height: 500px;
+    width: 1200px;
+    height: 800px;
     margin:0 auto;
     position:relative;
     text-align:center
@@ -8,8 +8,8 @@
 
 #infovis {
     position: relative;
-    width: 1000px;
-    height: 500px;
+    width: 1200px;
+    height: 800px;
     margin: auto;
     overflow: hidden;
 }

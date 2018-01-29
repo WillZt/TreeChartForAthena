@@ -10,7 +10,6 @@ var Log = {
   }
 };
 
-
 function init(){
     //init data
     var json;
@@ -21,7 +20,7 @@ function init(){
         dataType: "json",
         async: false,
         success: function (data) {
-            if (data._returncode == 1) {
+            if (data._returncode === 1) {
                 json = data._data;
             }
             console.log(data);
@@ -50,11 +49,11 @@ function init(){
 
         Node: {
             height: 50,
-            width: 150,
+            width: 200,
             type: 'rectangle',
             color: '#8DEEEE',
             overridable: true,
-            textAlign: "center",
+            textAlign: "center"
         },
  
         Edge: {
@@ -72,18 +71,24 @@ function init(){
         },
         
         onCreateLabel: function(label, node){
-            label.id = node.id;            
-            label.innerHTML = node.name;
+            label.id = node.id;
+            if (node.data.isUrlShow) {
+                label.innerHTML = '<a href=' + node.data.value + '>' + node.name + '</a>';
+            } else {
+                label.innerHTML = node.name;
+            }
+           
             label.onclick = function(){
 				st.onClick(node.id);
             };
+            label.herf = "dd";
             //set label styles
             var style = label.style;
-            style.width = 150 + 'px';
+            style.width = 200 + 'px';
             style.height = 40 + 'px';            
             style.cursor = 'pointer';
             style.color = '#eee';
-            style.fontSize = '1em';
+            style.fontSize = '1.2em';
             style.textAlign = 'center';
             style.paddingTop = '5px';
         },
