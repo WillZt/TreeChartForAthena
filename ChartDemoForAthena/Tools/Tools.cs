@@ -14,5 +14,14 @@ namespace ChartDemoForAthena.Tools
             time = startTime.AddMilliseconds(d * 1000);
             return time.ToString("yyyy-MM-dd hh:mm:ss");
         }
+
+        public static string SplitString(string origin, int len = 18)
+        {
+            if (origin.Length > 18)
+            {
+                origin = origin.Substring(0, 18) + "...";
+            }
+            return origin;
+        }
     }
 }

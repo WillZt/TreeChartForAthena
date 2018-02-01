@@ -43,12 +43,13 @@ function init(){
         Tips: {
             enable: true,
             onShow: function (tip, node) {
+                tip.style.width = 'auto';
                 tip.innerHTML = node.data.value;
             }
         },
 
         Node: {
-            height: 50,
+            height: 40,
             width: 200,
             type: 'rectangle',
             color: '#8DEEEE',
@@ -63,17 +64,17 @@ function init(){
         },
         
         onBeforeCompute: function(node){
-            Log.write("loading " + node.name);
+            Log.write("加载 " + node.data.value);
         },
         
         onAfterCompute: function(){
-            Log.write("done");
+            Log.write("加载完成!");
         },
         
         onCreateLabel: function(label, node){
             label.id = node.id;
             if (node.data.isUrlShow) {
-                label.innerHTML = '<a href=' + node.data.value + '>' + node.name + '</a>';
+                label.innerHTML = '<a href=' + node.data.link + '>' + node.name + '</a>';
             } else {
                 label.innerHTML = node.name;
             }
@@ -110,7 +111,7 @@ function init(){
         
         onBeforePlotLine: function(adj){
             if (adj.nodeFrom.selected && adj.nodeTo.selected) {
-                adj.data.$color = "#eed";
+                adj.data.$color = "#FF8000";
                 adj.data.$lineWidth = 3;
             }
             else {

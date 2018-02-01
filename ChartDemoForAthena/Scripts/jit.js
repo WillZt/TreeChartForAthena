@@ -9028,7 +9028,7 @@ $jit.ST= (function() {
         var canvas = this.canvas, that = this, Geom = this.geom, config = this.config;
         var innerController = {
             Move: {
-        	    enable: true,
+        	  enable: false,
               offsetX: config.offsetX || 0,
               offsetY: config.offsetY || 0  
             },

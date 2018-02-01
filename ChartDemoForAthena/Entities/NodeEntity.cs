@@ -11,6 +11,8 @@ namespace ChartDemoForAthena.Entities
 
         public string name { get; set; }
 
+        public string value { get; set; }
+
         public object data { get; set; }
 
         public List<NodeEntity> children { get; set; }

@@ -7,7 +7,7 @@ namespace ChartDemoForAthena.Entities
 {
     public class TipsEntity
     {
-        public string time { get; set; }
+        public string link { get; set; }
 
         public string value { get; set; }
 
